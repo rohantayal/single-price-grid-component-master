@@ -1,0 +1,162 @@
+:root {
+
+    --pri-cyan: hsl(179, 62%, 43%);
+    --pricyan-light: hsla(179, 47%, 52%);
+    --pri-bright-yellow: hsl(71, 73%, 54%);
+
+    --neu-light-gray: hsl(204, 43%, 93%);
+    --neu-grayish-blue: hsl(218, 22%, 67%);
+    font-size: 16px;
+    font-family: "Karla", Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--neu-light-gray);
+}
+
+#card-container{
+    width: 85%;
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1.1fr 1fr 1fr;
+}
+
+section.join{
+    background-color: white;
+    padding: 1.2rem;
+    border-radius: .5rem .5rem 0 0;
+    box-shadow: 0px 0px 16px 0px rgb(0, 0, 0, .25);
+}
+
+section.join>h1{
+    color: var(--pri-cyan);
+}
+
+section.join>h4{
+    color: var(--pri-bright-yellow);
+}
+
+section.join>p{
+    color: var(--neu-grayish-blue);
+    line-height: 1.5rem;
+    font-size: 14px;
+}
+
+section.subscription{
+    background-color: var(--pri-cyan);
+    padding: 1.2rem;
+    box-shadow: 0px 0px 16px 0px rgb(0, 0, 0, .25)
+}
+
+section.subscription>h2{
+    color: white;
+}
+
+div#price_list{
+    display: flex;
+    column-gap: .8rem;
+}
+
+div#price_list>span:first-child{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+div#price_list>span:last-child{
+    color: var(--neu-light-gray);
+    font-size: 1rem;
+    align-self: center;
+}
+
+section.subscription p{
+    margin-top: .5rem;
+    color: var(--neu-light-gray);
+    margin-bottom: 1.5rem;
+}
+
+section.subscription button{
+    background-color: var(--pri-bright-yellow);
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0px 4px 12px 4px rgb(0, 0, 0, .25);
+}
+
+section.subscription button:hover{
+    cursor: pointer;
+    transform: translate(0, 1.5px);
+    transition: transform .1s ease-in;
+}
+
+
+section.why_us{
+    background-color: var(--pricyan-light);
+    padding: 1.2rem;
+    border-radius: 0 0 .5rem .5rem;
+    box-shadow: 0px 0px 16px 0px rgb(0, 0, 0, .25)
+}
+
+section.why_us>h2{
+    color: white;
+}
+
+section.why_us ul{
+    padding: 0;
+}
+
+section.why_us>ul li{
+    color: var(--neu-light-gray);
+    line-height: 1.2rem;
+    list-style: none;
+    font-size: 14px;  
+}
+
+@media (min-width: 680px) {
+    #card-container{
+        max-width: 682px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 230px 280px;
+        grid-template-areas: "join join"
+                             "subscription whyus";
+    }
+    section.join{
+        grid-area: join;
+        padding: 2rem 4.5rem 2rem 2rem;
+        
+    }
+
+    section.join>p{
+        font-size: 1rem; 
+    }
+
+    section.subscription{
+        grid-area: subscription;
+        border-radius: 0 0 0 .5rem;
+        padding: 1rem 2rem;
+        box-shadow:  -3px 4px 8px 0px rgb(0, 0, 0, .25)
+    }
+
+    section.subscription p{
+        margin-bottom: 2.5rem;
+    }
+    section.why_us{
+        grid-area: whyus;
+        border-radius: 0 0 .5rem 0;
+        padding: 1rem 3rem;
+        box-shadow:  3px 4px 8px 0px rgb(0, 0, 0, .25)
+    }
+
+    section.why_us>ul li{
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+}
