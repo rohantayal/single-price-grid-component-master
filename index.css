@@ -38,8 +38,9 @@ section.join>h1{
     color: var(--pri-cyan);
 }
 
-section.join>h4{
+section.join>h2{
     color: var(--pri-bright-yellow);
+    font-size: 1rem;
 }
 
 section.join>p{
